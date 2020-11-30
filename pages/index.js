@@ -1,65 +1,54 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+import Link from 'next/link'
+
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>
+                    Main page
+                </title>
+            </Head>
+            
+            <main className={styles.main}>
+                <h1 className={styles.title}>Digital Signage</h1>
+                {/* <p className={styles.description}>Курсовая работа</p> */}
+                {/* <h2><Link href="/"><a>Обратно</a></Link></h2> */}
+                
+                <div className={styles.grid}>
+                    <Link href="/digital-signage"><a className={styles.card}>
+                        <h3>Digital Signage &rarr;</h3>
+                        <p>Немного о Digital Signage</p>
+                    </a></Link>
+          
+                    <Link href="/area-of-use"><a className={styles.card}>
+                        <h3>Области применения Digital Signage &rarr;</h3>
+                        <p>Список областей, где используется Digital Signage</p>
+                    </a></Link>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                    <Link href="/problems"><a className={styles.card}>
+                        <h3>Проблемы Digital Signage и их решение &rarr;</h3>
+                        <p>Список проблем технологии и варианты их решения</p>
+                    </a></Link>
+            
+                    <Link href="/new-digital-signage"><a className={styles.card}>
+                        <h3>Интересные разработки &rarr;</h3>
+                        <p>Примеры интересных Digital Signage проектов</p>
+                    </a></Link>
+                    
+                    <Link href="/test"><a className={styles.card}>
+                        <h3>Тест &rarr;</h3>
+                        <p>Небольшой тест</p>
+                    </a></Link>
+                    
+                </div>
+            </main>
+      
+            <footer className={styles.footer}>
+                <p>Свистунова Марина, 4ИВТ. Cанкт-Петербург. 2020</p>
+            </footer>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    )
 }
